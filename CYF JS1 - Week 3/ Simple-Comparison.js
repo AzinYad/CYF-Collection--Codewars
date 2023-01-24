@@ -17,3 +17,8 @@ function add(a, b) {
 
 
 console.log(add("3", 3));
+
+// best practice
+// function add(a, b) {
+//   return a == b
+// }
