@@ -10,9 +10,21 @@
 // You should return all people fields as well as the toy count as "toy_count".
 
 SELECT
-people.*,
-    COUNT(toys.id) AS toy_count 
+people.* ,
+COUNT(toys.id) AS toy_count 
 FROM people 
 LEFT JOIN toys 
 ON people.id = toys.people_id 
 GROUP BY people.id;
+
+// SELECT people.*,
+// COUNT(*) as toy_count
+// FROM people JOIN toys
+// ON people.id = toys.people_id
+// GROUP BY people.id
+
+// SELECT
+// P.id,
+// P.name,
+// (SELECT COUNT(*) FROM toys WHERE people_id = P.id) AS toy_count
+// FROM people AS P
