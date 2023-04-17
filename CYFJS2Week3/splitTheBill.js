@@ -31,10 +31,5 @@ function splitTheBill(x) {
         result[name] = Number.isInteger(x[name] - avg) ? x[name] - avg : parseFloat((x[name] - avg).toFixed(2));
     });
     return result;
-}
-
-console.log(splitTheBill({
-    A: 20,
-    B: 15,
-    C: 10
-}));
+};
+module.exports = splitTheBill;

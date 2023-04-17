@@ -1,13 +1,4 @@
-const splitTheBill = function splitTheBill(x) {
-    let names = Object.keys(x);
-    const result = {};
-    let total = names.reduce((sum, name) => sum + x[name], 0);
-    let avg = total / names.length;
-    names.forEach(name => {
-        result[name] = Number.isInteger(x[name] - avg) ? x[name] - avg : parseFloat((x[name] - avg).toFixed(2));
-    });
-    return result;
-};
+const splitTheBill = require("./splitTheBill");
 
 describe('splitTheBill', () => {
     test('should split the bill evenly when all values are the same', () => {
